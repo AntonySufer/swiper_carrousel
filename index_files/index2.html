@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #stage{
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+            background: #eeeeee;
+            box-shadow:0 0 3px 3px rgba(0,0,0,0.5);
+            overflow: hidden;
+            -webkit-perspective: 800px;
+            -webkit-perspective-origin: center -20%;
+        }
+        #container{
+            width: 128px;
+            height: 100px;
+            margin:100px auto;
+            position: relative;
+            -webkit-transform-style: preserve-3d;
+        }
+        #container img{
+            width: 128px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /*-webkit-transition: transform 3s ease 100ms;*/
+        }
+
+    </style>
+</head>
+<body>
+    <div id="stage">
+        <div id="container">
+            <!--<img id="s1" src="img/1.jpg" alt=""/>
+            <img id="s2" src="img/2.jpg" alt=""/>
+            <img id="s3" src="img/3.jpg" alt=""/>
+            <img id="s4" src="img/4.jpg" alt=""/>
+            <img id="s5" src="img/5.jpg" alt=""/>
+            <img id="s6" src="img/6.jpg" alt=""/>
+            <img id="s7" src="img/7.jpg" alt=""/>
+            <img id="s8" src="img/8.jpg" alt=""/>
+            <img id="s9" src="img/9.jpg" alt=""/>-->
+        </div>
+    </div>
+    <script src="./index_files/jquery-1.10.1.min.js"></script>
+    <script>
+    
+        var html="";
+        var x=64/Math.tan(20*Math.PI/180)+20;
+        var oContainer=document.getElementById("container");
+       /* for(var i=0;i<9;i++){
+//            html+='<img src="img/'+ (i+1)+'.jpg" style=" -webkit-transform:rotateY('+(-1*40)+'deg translateZ('+x+'px)>'
+//            html+='<img src="img/'+(i+1)+'.jpg" style=" -webkit-transform:ratateY('+(-1*40)+'deg) translateZ('+x+'px) ">'
+//            html+="<img src="">"
+        }
+        oContainer.innerHTML=html;*/
+        var count=0;
+        for(var i=0;i<9;i++){
+            var oImg=new Image();
+            oImg.onload=function(){
+                count++;
+                if(count==4){
+                    var aImg =document.getElementsByTagName("img");
+                    var time=900;
+                    for(var i=0;i<4;i++){
+                        time-=100;
+                        aImg[i].style.WebkitTransition="transform 2s ease "+time+"ms";
+                        aImg[i].style.WebkitTransform='rotateY('+(-i*40)+'deg) translateZ('+x+'px)';
+                    }
+                }
+            }
+            oImg.src="./zhiling"+(i+1)+".jpg";
+            oContainer.appendChild(oImg);
+        }
+/*
+        var $num=0;
+        $oContainer=$("#container")
+        $oContainer.click("click","oImg",function(){
+            $num=this.index();
+            this.css("WebkitTranstion=transform 1s ease");
+            this.css("WebkitTransform=rotateY("+num*40+"deg)");
+        })*/
+        var num=0;
+        oContainer.onclick=function(){
+//            num=this.index();
+            num++;
+            this.style.webkitTransition="transform 1s ease ";
+            this.style.WebkitTransform='rotateY('+num*40+'deg)';
+        }
+    </script>
+</body>
+</html>

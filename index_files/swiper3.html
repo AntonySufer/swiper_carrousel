@@ -1,0 +1,167 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="UTF-8">  
+    <title>3d旋转木马轮播</title>  
+    <meta name="viewport" content="width=device-width,user-scalable=no">  
+    <meta name="format-detection" content="telephone=no">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+    <script src="./jquery-1.10.1.min.js"></script>  
+    <link rel="stylesheet" href="./swiper.min.css">  
+    <style>  
+        body, html {  
+            min-width: 320px;  
+            max-width: 900px;  
+            height: 100%;  
+        }  
+        header {  
+            width: 100%;  
+            height: 16.25rem;  
+            background: url("images/banner.png") no-repeat;  
+            background-size: 100% 100%;  
+        }  
+        header .swiper-container {  
+            width: 100%;  
+              background-image:url(https://m.360buyimg.com/babel/jfs/t5641/43/3563182398/29758/448372fb/593e88c8N17b9905d.jpg) ; 
+              background-size:100%
+        }  
+        header .swiper-slide {  
+            background-position: center;  
+            background-size: 130% 120%;  
+            width: 60%;  
+            margin-left:50px;
+            height: 15rem;  
+        }  
+        header .swiper-slide img {  
+            width: 50%;  
+            height:8rem;  
+        }  
+    
+    </style>  
+
+    <style type="text/css">
+@-webkit-keyframes bounce-down {
+ 25% {-webkit-transform: translateY(-10px);}
+ 50%, 100% {-webkit-transform: translateY(0);}
+ 75% {-webkit-transform: translateY(10px);}
+}
+
+@keyframes bounce-down {
+ 25% {transform: translateY(-10px);}
+ 50%, 100% {transform: translateY(0);}
+ 75% {transform: translateY(10px);}
+}
+
+.animate-bounce-down{ -webkit-animation: bounce-down 3.0s linear infinite;animation: bounce-down 3.0s linear infinite;
+}
+
+@-webkit-keyframes bounce-up {
+ 25% {-webkit-transform: translateY(10px);}
+ 50%, 100% {-webkit-transform: translateY(0);}
+ 75% {-webkit-transform: translateY(-10px);}
+}
+
+@keyframes bounce-up {
+ 25% {transform: translateY(10px);}
+ 50%, 100% {transform: translateY(0);}
+ 75% {transform: translateY(-10px);}
+}
+
+.animate-bounce-up{ -webkit-animation: bounce-up 3.0s linear infinite;animation: bounce-up 3.0s linear infinite;}
+</style>
+</head>  
+<body>  
+<div class="index">  
+    <!-- 轮播 -->  
+    <header>  
+        <div class="swiper-container" >  
+            <div class="swiper-wrapper">  
+                <div class="swiper-slide swiper-slide-active">  
+                    <img src="https://m.360buyimg.com/babel/jfs/t6001/311/2517580365/53582/17cbd59b/59425462Nf8d7a26a.png" alt="图片加载失败" title="宣传图片">  
+                    <img src="https://m.360buyimg.com/babel/jfs/t5968/126/468259476/38148/623132b1/59284b75Na6214722.png" alt="图片加载失败" title="宣传图片">  
+                    <span></span>  
+                </div>  
+                <div class="swiper-slide">  
+                    <img src="https://m.360buyimg.com/babel/jfs/t5851/312/3808124456/46342/1a0840e6/594257f4Nc6112806.png" alt="图片加载失败" title="宣传图片">  
+                    <img src="https://m.360buyimg.com/babel/jfs/t5968/126/468259476/38148/623132b1/59284b75Na6214722.png" alt="图片加载失败" title="宣传图片">  
+                    <span></span>  
+                </div>  
+                <div class="swiper-slide">  
+                    <img src="https://m.360buyimg.com/babel/jfs/t5968/126/468259476/38148/623132b1/59284b75Na6214722.png" alt="图片加载失败" title="宣传图片">  
+                    <img src="https://m.360buyimg.com/babel/jfs/t5968/126/468259476/38148/623132b1/59284b75Na6214722.png" alt="图片加载失败" title="宣传图片">  
+                    <span></span>  
+                </div>  
+                <div class="swiper-slide">  
+                    <img src="https://m.360buyimg.com/babel/jfs/t5968/126/468259476/38148/623132b1/59284b75Na6214722.png" alt="图片加载失败" title="宣传图片">  
+                      <img src="https://m.360buyimg.com/babel/jfs/t5968/126/468259476/38148/623132b1/59284b75Na6214722.png" alt="图片加载失败" title="宣传图片">  
+                    <span></span>  
+                </div>  
+                <div class="swiper-slide">  
+                    <img src="https://m.360buyimg.com/babel/jfs/t5851/312/3808124456/46342/1a0840e6/594257f4Nc6112806.png" alt="图片加载失败" title="宣传图片">  
+                      <img src="https://m.360buyimg.com/babel/jfs/t5968/126/468259476/38148/623132b1/59284b75Na6214722.png" alt="图片加载失败" title="宣传图片">  
+                    <span></span>  
+                </div>  
+                 <div class="swiper-slide">  
+                    <img src="https://m.360buyimg.com/babel/jfs/t5968/126/468259476/38148/623132b1/59284b75Na6214722.png" alt="图片加载失败" title="宣传图片">  
+                      <img src="https://m.360buyimg.com/babel/jfs/t6001/311/2517580365/53582/17cbd59b/59425462Nf8d7a26a.png" alt="图片加载失败" title="宣传图片">  
+                    <span></span>  
+                </div>  
+                  <div class="swiper-slide">  
+                    <img src="https://m.360buyimg.com/babel/jfs/t5968/126/468259476/38148/623132b1/59284b75Na6214722.png" alt="图片加载失败" title="宣传图片">  
+                      <img src="https://m.360buyimg.com/babel/jfs/t6001/311/2517580365/53582/17cbd59b/59425462Nf8d7a26a.png" alt="图片加载失败" title="宣传图片">  
+                    <span></span>  
+                </div>  
+            </div>  
+
+        </div>  
+    </header>  
+</div>  
+<script src="./swiper.min.js"></script>  
+<script>  
+
+	$('.swiper-container').css({
+		height: $(window).height(),
+	});
+
+    $('.swiper-slide>img').each(function(index){
+			if(index%2==0){
+				$(this).css('float','right');
+			    $(this).css('margin-top','3rem');
+                $(this).css('margin-right','-1.3rem');
+                $(this).addClass('animate-bounce-up');
+			}else{
+		       	$(this).css('float','left');
+                $(this).css('margin-left','-1.3rem');
+                $(this).css('margin-top','-3rem');
+                $(this).addClass('animate-bounce-down');
+			}
+	  
+	
+	})
+
+// 轮播  
+    var swiper = new Swiper('.swiper-container', {  
+        loop : false,  //是否循环
+        effect: 'coverflow',  //3D模式
+        direction : 'vertical',  //垂直
+        initialSlide :6, //初始页
+        grabCursor: true,  //鼠标手
+        //  freeMode : false,
+         // freeModeSticky : true,
+         //freeModeMomentumRatio:1,
+        //  freeModeMomentumVelocityRatio:1,
+        centeredSlides: true,   //居中
+        slidesPerView: 'auto',   //显示个数 ，自动
+        coverflow: {  
+             rotate: 0,// 旋转的角度  
+            stretch: 250,// 拉伸   图片间左右的间距和密集度  
+            depth:250,// 深度   切换图片间上下的间距和密集度  
+            modifier:2,// 修正值 该值越大前面的效果越明显  
+            slideShadows : false// 页面阴影效果  
+        }
+      
+    });  
+
+</script>  
+</body>  
+</html>  
