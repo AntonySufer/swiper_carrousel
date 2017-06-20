@@ -1,7 +1,10 @@
 # swiper_carrousel
 swiper旋转木马 加载图片，轮播图片
 
-demo地址： https://antonysufer.github.io/swiper_carrousel/ （浏览器开启手机模式）
+demo1地址： https://antonysufer.github.io/swiper_carrousel/ （浏览器开启手机模式）
+demo2地址:http://sgzdz.qcplay.com/wap.php/Guide/2
+![](https://github.com/AntonySufer/swiper_carrousel/ewm.png)  
+
 
 示例代码  旋转木马
 // 轮播  
