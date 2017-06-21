@@ -10,7 +10,9 @@ demo2地址:http://sgzdz.qcplay.com/wap.php/Guide/2
 
 
 示例代码  旋转木马
-// 轮播  
+
+```js
+// 轮播  
     var swiper = new Swiper('.swiper-container', {  
         loop : false,  //是否循环
         effect: 'coverflow',  //3D模式
@@ -32,3 +34,5 @@ demo2地址:http://sgzdz.qcplay.com/wap.php/Guide/2
         }
       
     });  
+
+```js
